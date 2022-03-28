@@ -23,9 +23,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'bestuser'@'localhost' WITH GRANT OPTION;
 And a database:
 
 ```
-drop database if exists andersen;
-create database andersen;
-use andersen;
+drop database if exists overone;
+create database overone;
+use overone;
 ```
 
 ## Build application:
