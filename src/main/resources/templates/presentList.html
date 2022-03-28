@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style-present.css" th:href="@{/css/style-present.css}"/>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+<table class="table table-striped table-dark table-hover">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Team</th>
+        <th scope="col">Score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${studentsByDate.empty}">
+        <td colspan="4"> There aren't student</td>
+    </tr>
+    <tr th:each="list : ${studentsByDate}">
+        <td><span th:text="${list.id}"> Id</span></td>
+        <td>
+            <span th:text="${list.name}">Name</span>
+            <span th:if="${list.captain == true}">
+                    <img class="captain_logo" src="../static/img/captain.png" th:src="@{/img/captain.png}"
+                         alt="capitan_picture">
+            </span>
+        </td>
+        <td><span th:text="${list.getTeam().getId()}"> Score</span></td>
+        <td><span th:text="${list.score}"> Score</span></td>
+    </tr>
+    </tbody>
+</table>
+    <a href="#" class="btn btn-dark btn-lg" tabindex="-1" role="button" th:href="@{/}">Back to main</a>
+<br>
+
+</body>
+</html>
