@@ -8,6 +8,13 @@
 
 You can download mySQL here: [https://www.mysql.com/downloads](https://www.mysql.com/downloads).
 
+## Functionality
+
+This application allows connecting to database and working with its data. The goal is to take a list of students
+and simulate them quizzing each other. In the beginning, there are 2 students, student A is questioning student B.
+After that, the question and the answer are assessed by giving marks to each student. Then, student B is questioning
+student C. And that until the last student is questioning student A. In the end, the results are shown to the user.
+
 ## Setting
 
 After installing mySQL you need to create a user:

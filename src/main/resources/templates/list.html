@@ -39,17 +39,11 @@
             <td><span th:text="${current.getTeam().getId()}"> Score</span></td>
             <td><span th:text="${current.score}"> Score</span></td>
             <td>
-                <input type="checkbox" class="is_student_present" style="height: 30px; width: 30px; border-radius: "
+                <input type="checkbox" class="is_student_present" style="height: 30px; width: 30px; "
                        placeholder="Enter"
                        th:name="|students[${stat.index}].id|"
                        th:value="${current.getId()}"
                        th:checked="${current.isPresent()}"/>
-                <!--                <input type="checkbox" th:field="*{students[__${stat.index}__].present}" />-->
-                <!--                <input type="hidden" th:field="*{students[__${stat.index}__].id}" />-->
-                <!--                <input type="hidden" th:field="*{students[__${stat.index}__].name}" />-->
-                <!--                <input type="hidden" th:field="*{students[__${stat.index}__].score}" />-->
-                <!--                <input type="hidden" th:field="*{students[__${stat.index}__].capitan}" />-->
-                <!--                <input type="hidden" th:field="*{students[__${stat.index}__].present}" />-->
             </td>
         </tr>
         <tr>
